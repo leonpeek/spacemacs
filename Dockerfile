@@ -44,9 +44,9 @@ RUN cp ${UHOME}/.emacs.d/core/templates/.spacemacs.template ${UHOME}/ \
     && chmod ug+rw -R ${UHOME}
 
 # Test Spacemacs
-RUN asEnvUser make -C ${UHOME}/.emacs.d/tests/core/ test \
-    && cd ${UHOME}/.emacs.d \
-    && printf "SPACEMACS REVISION: %s\n" "$(git rev-parse --verify HEAD)"
+#RUN asEnvUser make -C ${UHOME}/.emacs.d/tests/core/ test \
+#    && cd ${UHOME}/.emacs.d \
+#    && printf "SPACEMACS REVISION: %s\n" "$(git rev-parse --verify HEAD)"
 
 RUN ln -s \
     ${UHOME}/.emacs.d/layers/+distributions/spacemacs-docker/deps-install/run \
